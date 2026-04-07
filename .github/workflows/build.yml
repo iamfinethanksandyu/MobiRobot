@@ -10,13 +10,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: 设置编译环境
-        uses: microsoft/setup-msbuild@v1.1
+      - name: 自动升级项目版本
+        run: |
+          $project = Get-Content "MobiRobot/MobiRobot.vcxproj" -Raw
+          $project = $project -replace "v100","v143"
+          Set-Content "MobiRobot/MobiRobot.vcxproj" -Value $project
 
-      - name: 开始编译EXE
+      - name: 编译 Release
         run: msbuild MobiRobot.sln /p:Configuration=Release /p:Platform=Win32
 
-      - name: 上传编译结果
+      - name: 上传EXE
         uses: actions/upload-artifact@v4
         with:
           name: MobiRobot_EXE
