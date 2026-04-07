@@ -10,18 +10,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: 设置 MSBuild
+      - name: 设置编译环境
         uses: microsoft/setup-msbuild@v1.1
-        
-      - name: 编译项目
-        shell: cmd
-        run: |
-          "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvars32.bat"
-          msbuild MobiRobot.sln /p:Configuration=Release /p:Platform=Win32 /p:PlatformToolset=v143 /v:detailed
-          
-      - name: 上传 exe
+
+      - name: 开始编译EXE
+        run: msbuild MobiRobot.sln /p:Configuration=Release /p:Platform=Win32
+
+      - name: 上传编译结果
         uses: actions/upload-artifact@v4
-        if: success() 
         with:
-          name: MobiRobot
+          name: MobiRobot_EXE
           path: Release/
