@@ -21,7 +21,7 @@ jobs:
           
       - name: 上传 exe
         uses: actions/upload-artifact@v4
-        if: success()
+        if: success() 
         with:
           name: MobiRobot
           path: Release/
