@@ -1,0 +1,20 @@
+﻿  stdafx.cpp
+  GeoDlg.cpp
+  MainFrm.cpp
+  MobiRobot.cpp
+  MobiRobotDoc.cpp
+  MobiRobotView.cpp
+MobiRobotView.cpp(153): warning C4305: “=”: 从“double”到“float”截断
+MobiRobotView.cpp(179): warning C4018: “<”: 有符号/无符号不匹配
+MobiRobotView.cpp(216): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+MobiRobotView.cpp(217): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+MobiRobotView.cpp(223): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+MobiRobotView.cpp(224): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+MobiRobotView.cpp(229): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+MobiRobotView.cpp(230): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+MobiRobotView.cpp(234): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+MobiRobotView.cpp(235): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+  MotionDlg.cpp
+  正在生成代码
+  已完成代码的生成
+  MobiRobot.vcxproj -> F:\教学课程\《机器人设计》选修课\课堂演示程序\小车实验4-键盘控制小车做圆弧运动\MobiRobot\Release\MobiRobot.exe

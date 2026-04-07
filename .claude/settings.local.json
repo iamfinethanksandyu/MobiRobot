@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where cl.exe)",
+      "Bash(where g++)",
+      "Bash(where mingw32-make:*)"
+    ]
+  }
+}
